@@ -1,0 +1,123 @@
+<html>
+<head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sản phẩm</title>
+    <link href="src/css/bootstrap.min.css" rel="stylesheet">
+	 <link href="src/css/style.css" rel="stylesheet">
+	 <script src="src/script/jquery-1.9.1.min.js"></script>
+	 <script src="src/js/loginfacebook.js"></script>
+
+<style>
+#DialogOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+#DialogOverlayContent {
+    margin-left:600px;
+	margin-top:200px;
+    color: #000;
+    width: 170px;
+    height: 250px;
+    z-index: 999999;
+    background: rgba(255, 255, 255, 1);
+	text-align:center;
+}
+#userBox {
+	margin-top:45px;
+	color:black;
+	width:50px;
+	height:50px;
+	z-index: 999999;
+    background: rgba(255, 255, 255, 1);
+	display:block;
+}
+#menuBox {
+	margin-top:55px;
+	margin-left:360px;
+	padding-left:20px;
+	background-color:#E0E0E0;
+	width:180px;
+	height:px;
+	z-index: 99999;
+	display:none;
+	border-style: solid;
+    border-width: 1px;
+}
+</style>
+	
+  </head>
+
+<body>
+	
+	<div id ="DialogOverlay">
+		<div id ="DialogOverlayContent">
+			<p style="font-size:20px;text-align:left;margin-left:10px;" >login </p>
+			<button style="width:160px;" onclick="LoginWithFacebook()">login With Facebook</button><br>
+			<button style="width:160px;">login With Google</button><br>
+			<button style="width:160px;">login With LinkedIn</button><br>
+			<button style="width:160px;">login With Istagram</button><br>
+			<button style="width:160px;">login With Soudcloud</button><br>
+			<button style="width:160px;">login With live</button><br><br>
+			<a href="#" onclick="closeDialog();">Close</a>
+		</div>
+	</div>
+
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li id="changelogin"><a href="#login" onclick="showFormDialog()">login</a></li>
+         </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+	<div id="menuBox">
+	</div>
+<script>
+function showFormDialog() {
+    // using plain JavaScript
+    document.getElementById('DialogOverlay').style.display = 'block';
+ 
+    // using jQuery
+    // $('#DialogOverlay').css('display', 'block');
+}
+function closeDialog() {
+    // using plain JavaScript
+    document.getElementById("DialogOverlay").style.display = 'none';
+ 
+    // using jQuery
+    // $("#DialogOverlay").css('display', 'none');
+}
+function showbox() {
+		if(document.getElementById("menuBox").style.display === 'block') {
+			document.getElementById("menuBox").style.display = 'none';
+		}
+		else {
+			document.getElementById("menuBox").style.display = 'block';
+		}
+}
+</script>
+</body>
+</html>
