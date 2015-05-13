@@ -1,0 +1,115 @@
+<html>
+<head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sản phẩm</title>
+    <link href="src/css/bootstrap.min.css" rel="stylesheet">
+	<link href="src/css/style.css" rel="stylesheet">
+	<script src="src/script/jquery-1.9.1.min.js"></script>
+	<script src="src/js/loginfacebook.js"></script>
+	
+	
+  </head>
+
+<body>
+
+<a href="#" id="loginFacebook" style="font-size:30px;" onclick="Login()">login with facebook</a><br>
+<button onclick="doLogout()">logout</button>
+<br>
+<a id="loginGoogle" style="font-size:30px;">login with goole</a>
+<!--script>
+//script.src = 'http://code.jquery.com/jquery-1.11.0.min.js';
+// Additional JS functions here
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '802824189816944', // App ID
+      // Channel File
+      status     : true, // check login status
+      cookie     : true, // enable cookies to allow the server to access the session
+      xfbml      : true,  // parse XFBML
+	  scopes: 'email,user_profile'
+    });
+  
+FB.Event.subscribe('auth.authResponseChange', function(response) 
+	{
+ 	 if (response.status === 'connected') 
+  	{
+  		//document.getElementById("message").innerHTML +=  "<br>Connected to Facebook";
+  		//SUCCESS
+		alert("conected");
+		getUserInfo();
+		//window.location.href="run.php";
+		
+  		
+  	}	 
+	else if (response.status === 'not_authorized') 
+    {	alert("Fail connect");
+    	//document.getElementById("message").innerHTML +=  "<br>Failed to Connect";
+
+		//FAILED
+    } else 
+    {
+    	//document.getElementById("message").innerHTML +=  "<br>Logged Out";
+
+    	//UNKNOWN ERROR
+    }
+	});	
+	
+    };
+    
+   	function Login()
+	{
+	
+		FB.login(function(response) {
+		   if (response.authResponse) 
+		   {
+		    	getUserInfo();
+  			} else 
+  			{
+  	    	 console.log('User cancelled login or did not fully authorize.');
+   			}
+		 },{scope: 'email,user_photos,user_videos'});
+	
+	}
+	 function getUserInfo() {
+	    FB.api('/me', function(response) {
+	 /* var str="<b>Name</b> : "+response.name+"<br>";
+	  	  str +="<b>Link: </b>"+response.link+"<br>";
+	  	  str +="<b>Username:</b> "+response.username+"<br>";
+	  	  str +="<b>id: </b>"+response.id+"<br>";
+	  	  str +="<b>Email:</b> "+response.email+"<br>";
+	  	  str +="<input type='button' value='Get Photo' onclick='getPhoto();'/>";
+	  	  str +="<input type='button' value='Logout' onclick='Logout();'/>";*/
+		var id = "huynh";
+		var name= "đasadsad";
+		//var firstname=response.first_name;
+		//var lastname=response.last_name;
+		//var gender=response.gender;
+		//var locale=response.locale;
+		//var birthday=response.user_birthday;
+		//var mail=response.email;
+		$.ajax( {
+			type:'POST',
+			url:'test.php',
+			data:"name="+name,
+			dataType:'json',
+			success:function(msg,string,jqXHR) {
+				//alert("sucess");
+			}
+		}); 
+    });
+		//window.location.href="run.php";
+    }
+  // Load the SDK Asynchronously
+  (function(d){
+     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement('script'); js.id = id; js.async = true;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     ref.parentNode.insertBefore(js, ref);
+   }(document));
+</script-->
+</body>
+</html>
