@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //script.src = 'http://code.jquery.com/jquery-1.11.0.min.js';
 // Additional JS functions 
   window.fbAsyncInit = function() {
@@ -98,3 +99,6 @@ FB.Event.subscribe('auth.authResponseChange', function(response)
      js.src = "//connect.facebook.net/en_US/all.js";
      ref.parentNode.insertBefore(js, ref);
    }(document));
+=======
+
+>>>>>>> c4612efed20dbae4f8ae4ac1ed406298940bb84b
