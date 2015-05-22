@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+	<script src="jquery-1.9.1.min.js"></script>
+	<script src="login-google.js"></script>
+    <title>SignUp</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/examples/signin/signin.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+	<div class="row"> 
+		<div class="col-md-2">
+			<button class="btn btn-sm btn-primary btn-block" type="button" onclick="login()">Login with Google</button>
+			<button class="btn btn-sm btn-primary btn-block" type="button" onclick="logout()">Logout</button>
+		</div>
+	</div>
+ 
+	<div id="profile"></div>
+</div> <!-- /container -->
+<script type="text/javascript">
+      (function() {
+       var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+       po.src = 'https://apis.google.com/js/client.js?onload=onLoadCallback';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+     })();
+</script>
+ 
+</body>
+</html>
